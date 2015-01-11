@@ -1,12 +1,10 @@
 # == Class: headphones::install
 class headphones::install() inherits headphones::params {
+  ensure_packages(['git', 'python'])
+
   user { $headphones::user:
     ensure => present,
     shell  => $headphones::user_shell,
-  }
-
-  package { 'git':
-    ensure => present,
   }
 
   vcsrepo { $headphones::install_dir:
