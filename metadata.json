@@ -1,0 +1,21 @@
+{
+  "name": "djl-headphones",
+  "version": "0.0.1",
+  "author": "djl",
+  "summary": "Install Headphones",
+  "license": "Apache 2.0",
+  "source": "https://github.com/djl/puppet-headphones.git",
+  "project_page": "https://github.com/djl/puppet-headphones",
+  "issues_url": "https://github.com/djl/puppet-headphones/issues",
+  "dependencies": [
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">= 3.2.0"
+    },
+    {
+      "name": "puppetlabs/vcsrepo",
+      "version_requirement": ">= 0.1.2"
+    }
+  ]
+}
+
