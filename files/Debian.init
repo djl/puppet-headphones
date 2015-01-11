@@ -23,7 +23,7 @@ DESC=Headphones
 
 RUN_AS=${HP_USER-headphones}
 APP_PATH=${HP_HOME-/usr/share/headphones}
-DATA_DIR=${HP_HOME-/var/lib/headphones}
+DATA_DIR=${HP_DATA-/var/lib/headphones}
 PID_FILE=${HP_PIDFILE=/var/run/headphones/headphones.pid}
 PID_PATH=$(dirname $PID_FILE)
 DAEMON=${PYTHON_BIN-/usr/bin/python}
