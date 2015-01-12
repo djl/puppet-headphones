@@ -3,7 +3,7 @@
   "version": "0.0.2",
   "author": "djl",
   "summary": "Install Headphones",
-  "license": "Apache 2.0",
+  "license": "ISC",
   "source": "https://github.com/djl/puppet-headphones.git",
   "project_page": "https://github.com/djl/puppet-headphones",
   "issues_url": "https://github.com/djl/puppet-headphones/issues",
