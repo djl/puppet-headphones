@@ -4,6 +4,7 @@ class headphones::params {
   $data_dir    = '/var/lib/headphones'
   $user        = 'headphones'
   $user_shell  = '/bin/false'
+  $manage_user = true
   $address     = '0.0.0.0'
   $port        = '8181'
   $pidfile     = '/var/run/headphones/headphones.pid'

@@ -2,9 +2,11 @@
 class headphones::install() inherits headphones::params {
   ensure_packages(['git', 'python'])
 
-  user { $headphones::user:
-    ensure => present,
-    shell  => $headphones::user_shell,
+  if $headphones::manage_user {
+    user { $headphones::user:
+      ensure => present,
+      shell  => $headphones::user_shell,
+    }
   }
 
   vcsrepo { $headphones::install_dir:

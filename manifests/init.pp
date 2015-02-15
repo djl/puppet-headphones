@@ -16,6 +16,9 @@
 # [*user_shell*]
 #   The Headphones user's shell
 #
+# [*manage_user*]
+#   Whether Puppet should manage this user
+#
 # [*address*]
 #   The address Headphones should listening on
 #
@@ -43,11 +46,15 @@ class headphones (
   $install_dir = $headphones::params::install_dir,
   $data_dir    = $headphones::params::data_dir,
   $user        = $headphones::params::user,
+  $user_shell  = $headphones::params::user_shell,
+  $manage_user = $headphones::params::manage_user,
   $address     = $headphones::params::address,
   $port        = $headphones::params::port,
   $pidfile     = $headphones::params::pidfile,
   $repo        = $headphones::params::repo,
 ) inherits headphones::params {
+
+  validate_bool($manage_user)
 
   class { 'headphones::install': } ->
   class { 'headphones::config': } ~>
