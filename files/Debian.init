@@ -8,8 +8,8 @@
 # Should-Stop:       $NetworkManager
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
-# Short-Description: starts instance of Headphones
-# Description:       starts instance of Headphones using start-stop-daemon
+# Short-Description: Headphones
+# Description:       Headphones
 ### END INIT INFO
 
 . /lib/lsb/init-functions
