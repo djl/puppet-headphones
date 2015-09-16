@@ -6,6 +6,7 @@ class headphones::install() inherits headphones::params {
     user { $headphones::user:
       ensure => present,
       shell  => $headphones::user_shell,
+      home   => $headphones::data_dir,
     }
   }
 
