@@ -1,0 +1,13 @@
+[Unit]
+Description=Headphones - Automatic music downloader for SABnzbd
+After=network.target
+
+[Service]
+User=<%= scope['::headphones::user'] %>
+ExecStart=/usr/bin/python <%= scope['::headphones::install_dir'] %>/Headphones.py --quiet --nolaunch --datadir=<%= scope['::headphones::data_dir'] %>
+Restart=on-failure
+SuccessExitStatus=2 3 4
+RestartForceExitStatus=3 4
+
+[Install]
+WantedBy=multi-user.target

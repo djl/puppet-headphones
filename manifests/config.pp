@@ -1,14 +1,8 @@
 # == Class: headphones::config
 class headphones::config {
-  case $::osfamily {
-    'Debian': { $config_file = '/etc/default/headphones' }
-    'RedHat': { $config_file = '/etc/sysconfig/headphones' }
-    default: { fail("Unsupported OS: ${::osfamily}") }
-  }
-
-  file { $config_file:
+  file { '/lib/systemd/systemd/headphones.service':
     ensure  => present,
-    content => template('headphones/config.erb'),
+    content => template('headphones/headphones.service.erb'),
     mode    => '0644',
   }
 }

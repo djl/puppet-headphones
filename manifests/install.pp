@@ -19,14 +19,6 @@ class headphones::install() inherits headphones::params {
     require  => [ User[$headphones::user], Package['git'] ]
   }
 
-  if $::osfamily =~ /^Debian|RedHat/ {
-    file { '/etc/init.d/headphones':
-      ensure => present,
-      source => "puppet:///modules/headphones/${::osfamily}.init",
-      mode   => '0755',
-    }
-  }
-
   file { $headphones::data_dir:
     ensure  => directory,
     mode    => '0755',

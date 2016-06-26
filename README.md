@@ -26,8 +26,7 @@ the service to start at boot.
 ### What headphones affects
 
 * Checks out Headphones from git
-* Creates an init script
-* Creates defaults under `/etc/default/headphones`
+* Creates a systemd unit file
 
 
 ### Beginning with headphones
@@ -50,6 +49,6 @@ All interaction for Headphones is done via the `headphones` class
 * `headphones`: Installs and configures the Headphones service
 
 #### Private classes:
-* `headphones::config`: Sets up the default options for Headphones (`/etc/default/headphones`)
+* `headphones::config`: Sets up the default options for Headphones
 * `headphones::install`: Installs Headphones
 * `headphones::service`: Configures the Headphones service

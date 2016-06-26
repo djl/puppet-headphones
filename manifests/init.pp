@@ -19,15 +19,6 @@
 # [*manage_user*]
 #   Whether Puppet should manage this user
 #
-# [*address*]
-#   The address Headphones should listening on
-#
-# [*port*]
-#   The port number Headphones should be running on
-#
-# [*pidfile*]
-#   The pidfile for the Headphones process
-#
 # [*repo*]
 #   The upstream git repo from which Headphones will be installed
 #
@@ -48,9 +39,6 @@ class headphones (
   $user        = $headphones::params::user,
   $user_shell  = $headphones::params::user_shell,
   $manage_user = $headphones::params::manage_user,
-  $address     = $headphones::params::address,
-  $port        = $headphones::params::port,
-  $pidfile     = $headphones::params::pidfile,
   $repo        = $headphones::params::repo,
 ) inherits headphones::params {
 
