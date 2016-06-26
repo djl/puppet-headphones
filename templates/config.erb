@@ -1,4 +1,4 @@
-HP_USER=<%= @user %>
-HP_HOME=<%= @install_dir %>
-HP_DATA=<%= @data_dir %>
-HP_PIDFILE=<%= @pidfile %>
+HP_USER=<%= scope['::headphones::user'] %>
+HP_HOME=<%= scope['::headphones::install_dir'] %>
+HP_DATA=<%= scope['::headphones::data_dir'] %>
+HP_PIDFILE=<%= scope['::headphones::pidfile'] %>
