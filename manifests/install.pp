@@ -1,7 +1,5 @@
 # == Class: headphones::install
 class headphones::install() inherits headphones::params {
-  ensure_packages(['git', 'python'])
-
   if $headphones::manage_user {
     user { $headphones::user:
       ensure => present,
@@ -16,7 +14,7 @@ class headphones::install() inherits headphones::params {
     source   => $headphones::repo,
     owner    => $headphones::user,
     group    => $headphones::user,
-    require  => [ User[$headphones::user], Package['git'] ]
+    require  => [ User[$headphones::user], ]
   }
 
   file { $headphones::data_dir:
